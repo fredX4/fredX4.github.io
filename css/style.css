@@ -101,3 +101,45 @@ article section:first-child {
 small {
     font-style: italic;
 }
+
+@media (max-width: 768px) {
+    main {
+        padding: 16px;
+    }
+
+    .header-container {
+        display: block;
+    }
+
+    .main-grid {
+        display: block;
+    }
+
+    aside {
+        border-right: none;
+    }
+
+    aside section {
+        padding-top: 10px;
+        padding-right: 0;
+    }
+
+    aside section:first-child {
+        padding-top: 0;
+    }
+    article {
+        padding-left: 0;
+    }
+
+    .detail-container {
+        display: block;
+    }
+
+    .time-details {
+        display: inline-block;
+        background-color: #b1aeae9a;
+        border-radius: 4px;
+        padding: 0 8px;
+        margin-bottom: 8px;
+    }
+}
