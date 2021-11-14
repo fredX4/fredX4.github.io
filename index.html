@@ -10,7 +10,8 @@
     <!-- Bootstrap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -18,19 +19,46 @@
     <main>
         <header>
             <div class="logo"></div>
-            <div class="menu">
-                <img src="./img/menu.png" alt="menu">
-            </div>
+            <div id="theme-switch"></div>
         </header>
-        <div class="main-container">
-            <section id="home">
-                <div class="profile-container">
-                    <div class="profile-image"></div>
-                    <div class="profile-background"></div>
+        <section id="home">
+            <div class="profile-image"></div>
+            <div class="about-me">
+                <h3>Hi I'm</h3>
+                <h1>Freddy</h1>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/freddy1135/" target="_blank">
+                        <div class="linkedin icon-block"></div>
+                    </a>
+                    <a href="https://github.com/freddy1135" target="_blank">
+                        <div class="github icon-block"></div>
+                    </a>
+                    <a href="https://twitter.com/fred_x4" target="_blank">
+                        <div class="twitter icon-block"></div>
+                    </a>
+                    <a href="https://www.instagram.com/fred._.e/" target="_blank">
+                        <div class="instagram icon-block"></div>
+                    </a>
+                    <a href="https://thefebruaryblogger.blogspot.com/" target="_blank">
+                        <div class="blogger icon-block"></div>
+                    </a>
                 </div>
-            </section>
-        </div>
+                <a href="mailto:freddyjettyjohnson1135@gmail.com">freddyjettyjohnson1135@gmail.com</a>
+            </div>
+        </section>
+        <div class="credits">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div class="credits">Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div class="credits">Icons made by <a href="https://www.flaticon.com/authors/google" title="Google">Google</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div class="credits">Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div class="credits">Icons made by <a href="https://www.flaticon.com/authors/riajulislam" title="riajulislam">riajulislam</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div class="credits">Icons made by <a href="https://www.flaticon.com/authors/adriansyah" title="adriansyah">adriansyah</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div class="credits">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </main>
 </body>
 
+<script>
+    document.getElementById("theme-switch").addEventListener("click", function() {
+        document.body.classList.toggle("night-mode");
+    });
+</script>
 </html>

@@ -1,84 +1,171 @@
+/* Generic
+------------------------------------------ */
+
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 *::before, *::after {
     box-sizing: inherit;
 }
 
+div {
+    background-size: cover;
+    background-position: center;
+}
+
+.credits {
+    display: none;
+}
+
+/* Header
+------------------------------------------ */
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 120px;
-    background-color: #f5f5f5;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    height: 90px;
+    position: sticky;
+    top: 0;
+    background-color: white;
 }
 
 .logo {
     background-image: url(../img/fred-logo-black.png);
-    background-size: cover;
-    height: 80px;
-    width: 40px;
+    height: 60px;
+    width: 30px;
     margin-left: 30px;
     cursor: pointer;
 }
 
-.menu {
-    background-size: cover;
-    height: 100%;
+#theme-switch {
+    background-image: url(../img/night-mode.png);
+    margin: 0 30px;
+    height: 25px;
+    width: 25px;
     cursor: pointer;
-    display: flex;
-    padding: 0 30px;
-    align-items: center;
 }
 
-.menu:hover {
-    background-color: #e5e5e5;
-    transition: background-color 0.3s ease-in-out;
-}
+/* Body
+------------------------------------------ */
 
-.menu img {
-    height: 30px;
-    width: 30px;
-}
-
-.main-container {
-    height: calc(100vh - 120px);
+section {
+    height: max(720px, calc(100vh - 90px));
+    margin: 0 30px;
 }
 
 #home {
-    /* background-color: aqua; */
-    height: inherit;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    align-content: center;
     align-items: center;
 }
 
-.profile-container {
-    height: 400px;
-    width: 300px;
-    position: relative;
-}
-
 .profile-image {
-    background-image: url(../img/profile.png);
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: 1;
+    background-image: url(../img/profile-bg.png);
+    height: 300px;
+    width: 300px;
 }
 
-.profile-background {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    background-color:#e5e5e5;
-    position: absolute;
-    top: 70px;
-    left: -25px;
-    z-index: 0;
+.about-me h1 {
+    line-height: 80px;
+    font-family: 'Rock Salt', cursive;
+    font-size: 50px;
+    color: #5a5a5a;
+}
+
+.about-me h2 {
+    font-size: 15px;
+}
+
+.about-me > a {
+    text-decoration: none;
+    color: black;
+    font-size: small;
+}
+
+.about-me > a:hover {
+    color: #5a5a5a;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+
+.icon-block {
+    width: 25px;
+    height: 25px;
+}
+
+.blogger {
+    background-image: url(../img/blogger.png);
+}
+
+.instagram {
+    background-image: url(../img/instagram.png);
+}
+
+.twitter {
+    background-image: url(../img/twitter.png);
+}
+
+.github {
+    background-image: url(../img/github-sign.png);
+}
+
+.linkedin {
+    background-image: url(../img/linkedin-logo.png);
+}
+
+/* Night Mode
+------------------------------------------ */
+
+.night-mode * {
+    background-color: #00040e;
+}
+
+.night-mode *, .night-mode a {
+    color: white;
+}
+
+.night-mode .logo {
+    background-image: url(../img/fred-logo-white.png);
+}
+
+.night-mode #theme-switch {
+    background-image: url(../img/sun.png);
+}
+
+.night-mode .profile-image {
+    background-image: url(../img/profile-bg-black.png);
+}
+
+.night-mode .about-me h1 {
+    color: #f5f5f5;
+}
+
+.night-mode .blogger {
+    background-image: url(../img/blogger-white.png);
+}
+
+.night-mode .instagram {
+    background-image: url(../img/instagram-white.png);
+}
+
+.night-mode .twitter {
+    background-image: url(../img/twitter-white.png);
+}
+
+.night-mode .github {
+    background-image: url(../img/github-white.png);
+}
+
+.night-mode .linkedin {
+    background-image: url(../img/linkedin-white.png);
 }
