@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    transition: background-image 0.5s ease;
 }
 
 *::before, *::after {
@@ -79,6 +80,7 @@ section {
 }
 
 .about-me h2 {
+    color: black;
     font-size: 15px;
 }
 
