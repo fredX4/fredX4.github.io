@@ -171,3 +171,25 @@ section {
 .night-mode .linkedin {
     background-image: url(../img/linkedin-white.png);
 }
+
+@media print {
+    .about-me h1 {
+        color: black;
+    }
+
+    .profile-image {
+        display: none;
+    }
+
+    .socials {
+        display: block;
+    }
+
+    .socials > a[href]::after {
+        content: " " attr(href);
+    }
+
+    .about-me > a[href]::before {
+        content: "Email me at: ";
+    }
+}
