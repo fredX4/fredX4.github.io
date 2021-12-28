@@ -29,7 +29,8 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 90px;
-    position: sticky;
+    width: 100%;
+    position: fixed;
     top: 0;
     background-color: white;
 }
@@ -54,7 +55,7 @@ header {
 ------------------------------------------ */
 
 section {
-    height: max(720px, calc(100vh - 90px));
+    height: max(720px, 100vh);
     margin: 0 30px;
 }
 
