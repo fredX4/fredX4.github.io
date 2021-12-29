@@ -32,6 +32,7 @@ header {
   height: 90px;
   width: 100%;
   position: fixed;
+  z-index: 100;
   top: 0;
   background-color: white;
 }
@@ -107,6 +108,8 @@ section {
 .separator-line {
   width: 100%;
   height: 1px;
+  position: relative;
+  z-index: 10;
   background-color: #5a5a5a;
   margin: 20px 0 10px 0;
   animation: scaleUp 12s infinite;
@@ -167,7 +170,7 @@ section {
 /* Night Mode
 ------------------------------------------ */
 
-.night-mode * {
+.night-mode header, .night-mode main {
   background-color: #00040e;
 }
 
