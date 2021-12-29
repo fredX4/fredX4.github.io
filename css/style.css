@@ -154,7 +154,8 @@ section {
     white-space: nowrap;
     overflow: hidden;
     display: inline-block;
-    animation: marquee 960s infinite;
+    transform: translateX(-50%);
+    animation: clear 960s forwards;
   }
   
   .marquee p {
@@ -262,21 +263,9 @@ section {
   }
 }
 
-@keyframes slide {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(50%);
-  }
-}
-
-@keyframes marquee {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-50%, 0, 0);
+@keyframes clear {
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
