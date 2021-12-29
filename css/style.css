@@ -2,195 +2,276 @@
 ------------------------------------------ */
 
 * {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    transition: background-image 0.5s ease;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: background-image 0.5s ease;
 }
 
-*::before, *::after {
-    box-sizing: inherit;
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 div {
-    background-size: cover;
-    background-position: center;
+  background-size: cover;
+  background-position: center;
 }
 
 .credits {
-    display: none;
+  display: none;
 }
 
 /* Header
 ------------------------------------------ */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 90px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: white;
 }
 
 .logo {
-    background-image: url(../img/fred-logo-black.png);
-    height: 60px;
-    width: 30px;
-    margin-left: 30px;
-    cursor: pointer;
+  background-image: url(../img/fred-logo-black.png);
+  height: 60px;
+  width: 30px;
+  margin-left: 30px;
+  cursor: pointer;
 }
 
 #theme-switch {
-    background-image: url(../img/night-mode.png);
-    margin: 0 30px;
-    height: 25px;
-    width: 25px;
-    cursor: pointer;
+  background-image: url(../img/night-mode.png);
+  margin: 0 30px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
 }
 
 /* Body
 ------------------------------------------ */
 
 section {
-    height: max(720px, 100vh);
-    margin: 0 30px;
+  height: max(720px, 100vh);
+  margin: 0 30px;
 }
 
 #home {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .profile-image {
-    background-image: url(../img/profile-bg.png);
-    height: 300px;
-    width: 300px;
+  background-image: url(../img/profile-bg.png);
+  height: 300px;
+  width: 300px;
 }
 
 .about-me h1 {
-    line-height: 80px;
-    font-family: 'Rock Salt', cursive;
-    font-size: 50px;
-    color: #5a5a5a;
+  line-height: 80px;
+  font-family: "Rock Salt", cursive;
+  font-size: 50px;
+  color: #5a5a5a;
 }
 
 .about-me h2 {
-    color: black;
-    font-size: 15px;
+  color: black;
+  font-size: 15px;
 }
 
 .about-me > a {
-    text-decoration: none;
-    color: black;
-    font-size: small;
+  text-decoration: none;
+  color: black;
+  font-size: small;
 }
 
 .about-me > a:hover {
-    color: #5a5a5a;
+  color: #5a5a5a;
 }
 
 .socials {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px 0;
+}
+
+.separator-line {
+  width: 100%;
+  height: 1px;
+  background-color: #5a5a5a;
+  margin: 20px 0 10px 0;
+  animation: scaleUp 12s infinite;
 }
 
 .icon-block {
-    width: 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
 }
 
 .blogger {
-    background-image: url(../img/blogger.png);
+  background-image: url(../img/blogger.png);
 }
 
 .instagram {
-    background-image: url(../img/instagram.png);
+  background-image: url(../img/instagram.png);
 }
 
 .twitter {
-    background-image: url(../img/twitter.png);
+  background-image: url(../img/twitter.png);
 }
 
 .github {
-    background-image: url(../img/github-sign.png);
+  background-image: url(../img/github-sign.png);
 }
 
 .linkedin {
-    background-image: url(../img/linkedin-logo.png);
+  background-image: url(../img/linkedin-logo.png);
 }
+
+/* Marquee
+------------------------------------------ */
+
+.marquee-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 5%;
+  }
+  
+  .marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: marquee 960s infinite;
+  }
+  
+  .marquee p {
+    display: inline-block;
+    font-family: linefont;
+    color: rgb(240, 240, 240);
+    opacity: 1;
+    font-size: 50px;
+    line-height: 1.2;
+    font-variation-settings: "wght" 100 , "wdth" 200;
+  }
 
 /* Night Mode
 ------------------------------------------ */
 
 .night-mode * {
-    background-color: #00040e;
+  background-color: #00040e;
 }
 
-.night-mode *, .night-mode a {
-    color: white;
+.night-mode *,
+.night-mode a {
+  color: white;
 }
 
 .night-mode .logo {
-    background-image: url(../img/fred-logo-white.png);
+  background-image: url(../img/fred-logo-white.png);
 }
 
 .night-mode #theme-switch {
-    background-image: url(../img/sun.png);
+  background-image: url(../img/sun.png);
 }
 
 .night-mode .profile-image {
-    background-image: url(../img/profile-bg-black.png);
+  background-image: url(../img/profile-bg-black.png);
 }
 
 .night-mode .about-me h1 {
-    color: #f5f5f5;
+  color: #f5f5f5;
 }
 
 .night-mode .blogger {
-    background-image: url(../img/blogger-white.png);
+  background-image: url(../img/blogger-white.png);
 }
 
 .night-mode .instagram {
-    background-image: url(../img/instagram-white.png);
+  background-image: url(../img/instagram-white.png);
 }
 
 .night-mode .twitter {
-    background-image: url(../img/twitter-white.png);
+  background-image: url(../img/twitter-white.png);
 }
 
 .night-mode .github {
-    background-image: url(../img/github-white.png);
+  background-image: url(../img/github-white.png);
 }
 
 .night-mode .linkedin {
-    background-image: url(../img/linkedin-white.png);
+  background-image: url(../img/linkedin-white.png);
+}
+
+.night-mode .separator-line {
+  background-color: #f5f5f5;
+}
+
+.night-mode .marquee p {
+    color: rgb(23 24 46);
 }
 
 @media print {
-    .about-me h1 {
-        color: black;
-    }
+  .about-me h1 {
+    color: black;
+  }
 
-    .profile-image {
-        display: none;
-    }
+  .profile-image {
+    display: none;
+  }
 
-    .socials {
-        display: block;
-    }
+  .socials {
+    display: block;
+  }
 
-    .socials > a[href]::after {
-        content: " " attr(href);
-    }
+  .socials > a[href]::after {
+    content: " " attr(href);
+  }
 
-    .about-me > a[href]::before {
-        content: "Email me at: ";
-    }
+  .about-me > a[href]::before {
+    content: "Email me at: ";
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scaleX(0.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
